@@ -80,7 +80,6 @@ def obter_tabela_sql(query):
 
 
 # --- SALVANDO DADOS NO BANCO ---
-
 if st.button('Enviar os dados'):
 
     #criando a tabela sql
@@ -116,5 +115,8 @@ if st.button('Enviar os dados'):
     # --- PARTE 3 ---
 st.header('Parte 3 - Acessar a tabela SQL')
 
-df = obter_tabela_sql('SELECT * FROM tabela_arte')
-st.write(df)
+try:
+    df = obter_tabela_sql('SELECT * FROM tabela_arte')
+    st.write(df)
+except:
+    st.write('Erro: Conexão indisponível.')
