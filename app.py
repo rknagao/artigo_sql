@@ -113,7 +113,7 @@ if st.button('Enviar os dados'):
 
 
     # --- PARTE 3 ---
-st.header('Parte 3 - Acessar a tabela SQL')
+st.header('Parte 3 - Acessar a tabela SQL recém criada')
 
 try:
     df = obter_tabela_sql('SELECT * FROM tabela_arte')
